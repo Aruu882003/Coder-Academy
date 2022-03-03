@@ -1,0 +1,1182 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Welcome to Coder Academy. A blog for coding enthusiasts">
+
+  <title> Coder Academy </title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <style type="text/css">
+    /* FontAwesome for working BootSnippet :> */
+
+    @import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
+    #team {
+      background: #eee !important;
+    }
+
+    .btn-primary:hover,
+    .btn-primary:focus {
+      background-color: #108d6f;
+      border-color: #108d6f;
+      box-shadow: none;
+      outline: none;
+    }
+
+    .btn-primary {
+      color: #fff;
+      background-color: #007b5e;
+      border-color: #007b5e;
+    }
+
+    section {
+      padding: 60px 0;
+    }
+
+    section .section-title {
+      text-align: center;
+      color: #007b5e;
+      margin-bottom: 50px;
+      text-transform: uppercase;
+    }
+
+    #team .card {
+      border: none;
+      background: #ffffff;
+    }
+
+    .image-flip:hover .backside,
+    .image-flip.hover .backside {
+      -webkit-transform: rotateY(0deg);
+      -moz-transform: rotateY(0deg);
+      -o-transform: rotateY(0deg);
+      -ms-transform: rotateY(0deg);
+      transform: rotateY(0deg);
+      border-radius: .25rem;
+    }
+
+    .image-flip:hover .frontside,
+    .image-flip.hover .frontside {
+      -webkit-transform: rotateY(180deg);
+      -moz-transform: rotateY(180deg);
+      -o-transform: rotateY(180deg);
+      transform: rotateY(180deg);
+    }
+
+    .mainflip {
+      -webkit-transition: 1s;
+      -webkit-transform-style: preserve-3d;
+      -ms-transition: 1s;
+      -moz-transition: 1s;
+      -moz-transform: perspective(1000px);
+      -moz-transform-style: preserve-3d;
+      -ms-transform-style: preserve-3d;
+      transition: 1s;
+      transform-style: preserve-3d;
+      position: relative;
+    }
+
+    .frontside {
+      position: relative;
+      -webkit-transform: rotateY(0deg);
+      -ms-transform: rotateY(0deg);
+      z-index: 2;
+      margin-bottom: 30px;
+    }
+
+    .backside {
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: white;
+      -webkit-transform: rotateY(-180deg);
+      -moz-transform: rotateY(-180deg);
+      -o-transform: rotateY(-180deg);
+      -ms-transform: rotateY(-180deg);
+      transform: rotateY(-180deg);
+      -webkit-box-shadow: 5px 7px 9px -4px rgb(158, 158, 158);
+      -moz-box-shadow: 5px 7px 9px -4px rgb(158, 158, 158);
+      box-shadow: 5px 7px 9px -4px rgb(158, 158, 158);
+    }
+
+    .frontside,
+    .backside {
+      -webkit-backface-visibility: hidden;
+      -moz-backface-visibility: hidden;
+      -ms-backface-visibility: hidden;
+      backface-visibility: hidden;
+      -webkit-transition: 1s;
+      -webkit-transform-style: preserve-3d;
+      -moz-transition: 1s;
+      -moz-transform-style: preserve-3d;
+      -o-transition: 1s;
+      -o-transform-style: preserve-3d;
+      -ms-transition: 1s;
+      -ms-transform-style: preserve-3d;
+      transition: 1s;
+      transform-style: preserve-3d;
+    }
+
+    .frontside .card,
+    .backside .card {
+      min-height: 312px;
+    }
+
+    .backside .card a {
+      font-size: 18px;
+      color: #007b5e !important;
+    }
+
+    .frontside .card .card-title,
+    .backside .card .card-title {
+      color: #007b5e !important;
+    }
+
+    .frontside .card .card-body img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+      <div class="container-fluid">
+        <img class="img-fluid" src="img/logo.jpg " style="height: 32px; width: 52px;  border-radius: 45%; ">&nbsp;
+        <a class="navbar-brand" href="#">Code Academy</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+          aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav me-auto mb-2 mb-md-0">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="/coder academy.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/about.html">About</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle active" href="#" id="navbarDarkDropdownMenuLink" role="button"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                Courses
+              </a>
+              <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
+                <li><a class="dropdown-item" href="#">Software Engineer</a></li>
+                <li><a class="dropdown-item" href="#">Hardware Engineer</a></li>
+                <li><a class="dropdown-item" href="#">Digital Marketing</a></li>
+                <li><a class="dropdown-item" href="#">E-Accoutning</a></li>
+                <li><a class="dropdown-item" href="#">Mutlimedia & Animation</a></li>
+                <li><a class="dropdown-item" href="#">Website Development</a></li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="#">Short term courses</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " href="/contact.html">Contact Us</a>
+            </li>
+          </ul>
+          <form class="d-flex">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-primary" type="submit">Search</button>
+
+
+          </form>&nbsp;
+          <button type="button" class="btn btn-danger" data-bs-toggle="modal"
+            data-bs-target="#idModal">Login</button>&nbsp;
+
+          <button type="button" class="btn btn-danger" onClick="showMessage()">LogOut</button>
+
+
+
+        </div>
+      </div>
+    </nav>
+
+    <!---modal-->
+    <div class="modal fade" id="idModal" tabindex="-1" aria-labelledby="idModalLabel" aria-hidden="false">
+      <div class="modal-dialog">
+        <div class="modal-content rounded-5 shadow">
+          <div class="modal-header p-5 pb-4 border-bottom-0">
+            <!-- <h5 class="modal-title">Modal title</h5> -->
+            <h2 class="fw-bold mb-0">Login for free</h2>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+
+          <div class="modal-body p-5 pt-0">
+            <form class="">
+              <div class="form-floating mb-3">
+                <input type="email" class="form-control rounded-4" id="floatingInput" placeholder="name@example.com">
+                <label for="floatingInput">Email address</label>
+              </div>
+              <div class="form-floating mb-3">
+                <input type="password" class="form-control rounded-4" id="floatingPassword" placeholder="Password">
+                <label for="floatingPassword">Password</label>
+              </div>
+              <button class="w-100 mb-2 btn btn-lg rounded-4 btn-primary" type="submit">Sign up</button>
+              <small class="text-muted">By clicking Sign up, you agree to the terms of use.</small>
+              <hr class="my-4">
+              <h2 class="fs-5 fw-bold mb-3">Or use a third-party</h2>
+              <button class="w-100 py-2 mb-2 btn btn-outline-dark rounded-4" type="submit">
+                <svg class="bi me-1" width="16" height="16">
+                  <use xlink:href="#twitter"></use>
+                </svg>
+                Sign up with Twitter
+              </button>
+              <button class="w-100 py-2 mb-2 btn btn-outline-primary rounded-4" type="submit">
+                <svg class="bi me-1" width="16" height="16">
+                  <use xlink:href="#facebook"></use>
+                </svg>
+                Sign up with Facebook
+              </button>
+              <button class="w-100 py-2 mb-2 btn btn-outline-secondary rounded-4" type="submit">
+                <svg class="bi me-1" width="16" height="16">
+                  <use xlink:href="#github"></use>
+                </svg>
+                Sign up with GitHub
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+  </header>
+
+
+
+
+
+
+
+
+
+
+
+  <section id="team" class="pb-5">
+
+    <div class="container">
+      <br><br>
+      <h5 class="section-title h1">OUR COURSES</h5>
+      <div class="row">
+        <!-- Team member -->
+        <div class="col-xs-12 col-sm-6 col-md-4">
+          <div class="image-flip">
+            <div class="mainflip flip-0">
+              <div class="frontside">
+                <div class="card">
+                  <div class="card-body text-center">
+                    <p><img class=" img-fluid"
+                        src="img/course1.jpg" alt="card image">
+                    </p>
+                    <h4 class="card-title">Software Engineer</h4>
+                    <p class="card-text">It is an engineering approach on a software development of systematics application.</p>
+                    <a href="https://www.fiverr.com/share/qb8D02" class="btn btn-primary btn-sm"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-braces-asterisk" viewBox="0 0 16 16">
+                      <path fill-rule="evenodd" d="M1.114 8.063V7.9c1.005-.102 1.497-.615 1.497-1.6V4.503c0-1.094.39-1.538 1.354-1.538h.273V2h-.376C2.25 2 1.49 2.759 1.49 4.352v1.524c0 1.094-.376 1.456-1.49 1.456v1.299c1.114 0 1.49.362 1.49 1.456v1.524c0 1.593.759 2.352 2.372 2.352h.376v-.964h-.273c-.964 0-1.354-.444-1.354-1.538V9.663c0-.984-.492-1.497-1.497-1.6ZM14.886 7.9v.164c-1.005.103-1.497.616-1.497 1.6v1.798c0 1.094-.39 1.538-1.354 1.538h-.273v.964h.376c1.613 0 2.372-.759 2.372-2.352v-1.524c0-1.094.376-1.456 1.49-1.456v-1.3c-1.114 0-1.49-.362-1.49-1.456V4.352C14.51 2.759 13.75 2 12.138 2h-.376v.964h.273c.964 0 1.354.444 1.354 1.538V6.3c0 .984.492 1.497 1.497 1.6ZM7.5 11.5V9.207l-1.621 1.621-.707-.707L6.792 8.5H4.5v-1h2.293L5.172 5.879l.707-.707L7.5 6.792V4.5h1v2.293l1.621-1.621.707.707L9.208 7.5H11.5v1H9.207l1.621 1.621-.707.707L8.5 9.208V11.5h-1Z"/>
+                    </svg></a>
+                    
+                  </div>
+                </div>
+              </div>
+              <div class="backside">
+                <div class="card">
+                  <div class="card-body text-center mt-4">
+                    <h4 class="card-title">Software Engineer </h4>
+                    <p class="card-text">In this course You learn many think about Software Engineering Models, Software Management activities, Software Management Tools, Software Testing levels and it's designing... </p>
+                      <button type="button" class="btn btn-outline-danger" style="margin-bottom: 10px;" data-bs-toggle="modal" data-bs-target="#exampleModal">Apply Now</button>
+
+                    <ul class="list-inline">
+                      <li class="list-inline-item">
+                        <a class="social-icon text-xs-center" target="_blank"
+                          href="https://www.fiverr.com/share/qb8D02">
+                          <i class="fa fa-facebook"></i>
+                        </a>
+                      </li>
+                      <li class="list-inline-item">
+                        <a class="social-icon text-xs-center" target="_blank"
+                          href="https://www.fiverr.com/share/qb8D02">
+                          <i class="fa fa-twitter"></i>
+                        </a>
+                      </li>
+                      <li class="list-inline-item">
+                        <a class="social-icon text-xs-center" target="_blank"
+                          href="https://www.fiverr.com/share/qb8D02">
+                          <i class="fa fa-skype"></i>
+                        </a>
+                      </li>
+                      <li class="list-inline-item">
+                        <a class="social-icon text-xs-center" target="_blank"
+                          href="https://www.fiverr.com/share/qb8D02">
+                          <i class="fa fa-google"></i>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- ./Team member -->
+        <!-- Team member -->
+        <div class="col-xs-12 col-sm-6 col-md-4">
+          <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
+            <div class="mainflip">
+              <div class="frontside">
+                <div class="card">
+                  <div class="card-body text-center">
+                    <p><img class=" img-fluid"
+                  src="img/course2.jpg" alt="card image">
+                    </p>
+                    <h4 class="card-title">Hardware Engineer </h4>
+                    <p class="card-text" style="font-size: 15px;">It's spend considerable time solving problems, guiding installation.</p>
+                    <a href="https://www.fiverr.com/share/qb8D02" class="btn btn-primary btn-sm"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-motherboard-fill" viewBox="0 0 16 16">
+                      <path d="M5 7h3V4H5v3Z"/>
+                      <path d="M1 2a2 2 0 0 1 2-2h11a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-2H.5a.5.5 0 0 1-.5-.5v-1A.5.5 0 0 1 .5 9H1V8H.5a.5.5 0 0 1-.5-.5v-1A.5.5 0 0 1 .5 6H1V5H.5a.5.5 0 0 1-.5-.5v-2A.5.5 0 0 1 .5 2H1Zm11 .5a.5.5 0 0 0-1 0v7a.5.5 0 0 0 1 0v-7Zm2 0a.5.5 0 0 0-1 0v7a.5.5 0 0 0 1 0v-7ZM3.5 10a.5.5 0 0 0 0 1h6a.5.5 0 0 0 0-1h-6Zm0 2a.5.5 0 0 0 0 1h6a.5.5 0 0 0 0-1h-6ZM4 4h-.5a.5.5 0 0 0 0 1H4v1h-.5a.5.5 0 0 0 0 1H4a1 1 0 0 0 1 1v.5a.5.5 0 0 0 1 0V8h1v.5a.5.5 0 0 0 1 0V8a1 1 0 0 0 1-1h.5a.5.5 0 0 0 0-1H9V5h.5a.5.5 0 0 0 0-1H9a1 1 0 0 0-1-1v-.5a.5.5 0 0 0-1 0V3H6v-.5a.5.5 0 0 0-1 0V3a1 1 0 0 0-1 1Zm7 7.5v1a.5.5 0 0 0 .5.5h2a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-2a.5.5 0 0 0-.5.5Z"/>
+                    </svg></a>
+                  </div>
+                </div>
+              </div>
+              <div class="backside">
+                <div class="card">
+                  <div class="card-body text-center mt-4">
+                    <h4 class="card-title">Hardware Engineer </h4>
+                    <p class="card-text">Computer hardware engineers design and supervise the manufacture and installation of computer systems and related products  guiding installation, and conducting computer product testing.. </p>
+                      <button type="button" class="btn btn-outline-danger" style="margin-bottom: 10px;" data-bs-toggle="modal" data-bs-target="#exampleModal">Apply Now</button>
+
+                    <ul class="list-inline">
+                      <li class="list-inline-item">
+                        <a class="social-icon text-xs-center" target="_blank"
+                          href="https://www.fiverr.com/share/qb8D02">
+                          <i class="fa fa-facebook"></i>
+                        </a>
+                      </li>
+                      <li class="list-inline-item">
+                        <a class="social-icon text-xs-center" target="_blank"
+                          href="https://www.fiverr.com/share/qb8D02">
+                          <i class="fa fa-twitter"></i>
+                        </a>
+                      </li>
+                      <li class="list-inline-item">
+                        <a class="social-icon text-xs-center" target="_blank"
+                          href="https://www.fiverr.com/share/qb8D02">
+                          <i class="fa fa-skype"></i>
+                        </a>
+                      </li>
+                      <li class="list-inline-item">
+                        <a class="social-icon text-xs-center" target="_blank"
+                          href="https://www.fiverr.com/share/qb8D02">
+                          <i class="fa fa-google"></i>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- ./Team member -->
+        <!-- Team member -->
+        <div class="col-xs-12 col-sm-6 col-md-4">
+          <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
+            <div class="mainflip">
+              <div class="frontside">
+                <div class="card">
+                  <div class="card-body text-center">
+                    <p><img class=" img-fluid"
+                        src="img/course3.jpg" alt="card image">
+                    </p>
+                    <h4 class="card-title">Digital Marketing</h4>
+                    <p class="card-text"> A marketing campaign involves digital communication, it's digital marketing.</p>
+                    <a href="https://www.fiverr.com/share/qb8D02" class="btn btn-primary btn-sm"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-globe2" viewBox="0 0 16 16">
+                      <path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm7.5-6.923c-.67.204-1.335.82-1.887 1.855-.143.268-.276.56-.395.872.705.157 1.472.257 2.282.287V1.077zM4.249 3.539c.142-.384.304-.744.481-1.078a6.7 6.7 0 0 1 .597-.933A7.01 7.01 0 0 0 3.051 3.05c.362.184.763.349 1.198.49zM3.509 7.5c.036-1.07.188-2.087.436-3.008a9.124 9.124 0 0 1-1.565-.667A6.964 6.964 0 0 0 1.018 7.5h2.49zm1.4-2.741a12.344 12.344 0 0 0-.4 2.741H7.5V5.091c-.91-.03-1.783-.145-2.591-.332zM8.5 5.09V7.5h2.99a12.342 12.342 0 0 0-.399-2.741c-.808.187-1.681.301-2.591.332zM4.51 8.5c.035.987.176 1.914.399 2.741A13.612 13.612 0 0 1 7.5 10.91V8.5H4.51zm3.99 0v2.409c.91.03 1.783.145 2.591.332.223-.827.364-1.754.4-2.741H8.5zm-3.282 3.696c.12.312.252.604.395.872.552 1.035 1.218 1.65 1.887 1.855V11.91c-.81.03-1.577.13-2.282.287zm.11 2.276a6.696 6.696 0 0 1-.598-.933 8.853 8.853 0 0 1-.481-1.079 8.38 8.38 0 0 0-1.198.49 7.01 7.01 0 0 0 2.276 1.522zm-1.383-2.964A13.36 13.36 0 0 1 3.508 8.5h-2.49a6.963 6.963 0 0 0 1.362 3.675c.47-.258.995-.482 1.565-.667zm6.728 2.964a7.009 7.009 0 0 0 2.275-1.521 8.376 8.376 0 0 0-1.197-.49 8.853 8.853 0 0 1-.481 1.078 6.688 6.688 0 0 1-.597.933zM8.5 11.909v3.014c.67-.204 1.335-.82 1.887-1.855.143-.268.276-.56.395-.872A12.63 12.63 0 0 0 8.5 11.91zm3.555-.401c.57.185 1.095.409 1.565.667A6.963 6.963 0 0 0 14.982 8.5h-2.49a13.36 13.36 0 0 1-.437 3.008zM14.982 7.5a6.963 6.963 0 0 0-1.362-3.675c-.47.258-.995.482-1.565.667.248.92.4 1.938.437 3.008h2.49zM11.27 2.461c.177.334.339.694.482 1.078a8.368 8.368 0 0 0 1.196-.49 7.01 7.01 0 0 0-2.275-1.52c.218.283.418.597.597.932zm-.488 1.343a7.765 7.765 0 0 0-.395-.872C9.835 1.897 9.17 1.282 8.5 1.077V4.09c.81-.03 1.577-.13 2.282-.287z"/>
+                    </svg></a>
+                  </div>
+                </div>
+              </div>
+              <div class="backside">
+                <div class="card">
+                  <div class="card-body text-center mt-4">
+                    <h4 class="card-title">Digital Marketing</h4>
+                    <p class="card-text"  style="font-size: 14px;">It refers to advertising delivered through digital channels such as search engines, websites, social media, email and mobile apps. Using these online media channels, Digital Marketing is the method by which companies endorse goods, services,and brands. </p>
+                      <button type="button" class="btn btn-outline-danger" style="margin-bottom: 10px;"data-bs-toggle="modal" data-bs-target="#exampleModal">Apply Now</button>
+
+                    <ul class="list-inline">
+                      <li class="list-inline-item">
+                        <a class="social-icon text-xs-center" target="_blank"
+                          href="https://www.fiverr.com/share/qb8D02">
+                          <i class="fa fa-facebook"></i>
+                        </a>
+                      </li>
+                      <li class="list-inline-item">
+                        <a class="social-icon text-xs-center" target="_blank"
+                          href="https://www.fiverr.com/share/qb8D02">
+                          <i class="fa fa-twitter"></i>
+                        </a>
+                      </li>
+                      <li class="list-inline-item">
+                        <a class="social-icon text-xs-center" target="_blank"
+                          href="https://www.fiverr.com/share/qb8D02">
+                          <i class="fa fa-skype"></i>
+                        </a>
+                      </li>
+                      <li class="list-inline-item">
+                        <a class="social-icon text-xs-center" target="_blank"
+                          href="https://www.fiverr.com/share/qb8D02">
+                          <i class="fa fa-google"></i>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- ./Team member -->
+        <!-- Team member -->
+        <div class="col-xs-12 col-sm-6 col-md-4">
+          <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
+            <div class="mainflip">
+              <div class="frontside">
+                <div class="card">
+                  <div class="card-body text-center">
+                    <p><img class=" img-fluid"
+                        src="img/course4.jpg" alt="card image">
+                    </p>
+                    <h4 class="card-title">E-Accounting</h4>
+                    <p class="card-text" style="font-size: 14px;">It is the application of online and Internet technologies to the business accounting function.</p>
+                    <a href="https://www.fiverr.com/share/qb8D02" class="btn btn-primary btn-sm"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-file-earmark-spreadsheet-fill" viewBox="0 0 16 16">
+                      <path d="M6 12v-2h3v2H6z"/>
+                      <path d="M9.293 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.707A1 1 0 0 0 13.707 4L10 .293A1 1 0 0 0 9.293 0zM9.5 3.5v-2l3 3h-2a1 1 0 0 1-1-1zM3 9h10v1h-3v2h3v1h-3v2H9v-2H6v2H5v-2H3v-1h2v-2H3V9z"/>
+                    </svg></a>
+                  </div>
+                </div>
+              </div>
+              <div class="backside">
+                <div class="card">
+                  <div class="card-body text-center mt-4">
+                    <h4 class="card-title">E-Accounting</h4>
+                    <p class="card-text"> e-mail being an electronic version of traditional mail, e-accounting is "electronic enablement" of lawful accounting and traceable accounting processes which were traditionally manual and paper-based.</p>
+                      <button type="button" class="btn btn-outline-danger"data-bs-toggle="modal" data-bs-target="#exampleModal" style="margin-bottom: 10px;">Apply Now</button>
+
+                    <ul class="list-inline">
+                      <li class="list-inline-item">
+                        <a class="social-icon text-xs-center" target="_blank"
+                          href="https://www.fiverr.com/share/qb8D02">
+                          <i class="fa fa-facebook"></i>
+                        </a>
+                      </li>
+                      <li class="list-inline-item">
+                        <a class="social-icon text-xs-center" target="_blank"
+                          href="https://www.fiverr.com/share/qb8D02">
+                          <i class="fa fa-twitter"></i>
+                        </a>
+                      </li>
+                      <li class="list-inline-item">
+                        <a class="social-icon text-xs-center" target="_blank"
+                          href="https://www.fiverr.com/share/qb8D02">
+                          <i class="fa fa-skype"></i>
+                        </a>
+                      </li>
+                      <li class="list-inline-item">
+                        <a class="social-icon text-xs-center" target="_blank"
+                          href="https://www.fiverr.com/share/qb8D02">
+                          <i class="fa fa-google"></i>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- ./Team member -->
+        <!-- Team member -->
+        <div class="col-xs-12 col-sm-6 col-md-4">
+          <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
+            <div class="mainflip">
+              <div class="frontside">
+                <div class="card">
+                  <div class="card-body text-center">
+                    <p><img class=" img-fluid"
+                        src="img/course5.jpg" alt="card image">
+                    </p>
+                    <h4 class="card-title" >Mutlimedia & Animation</h4>
+                    <p class="card-text" style="font-size: 14px;">The advanced study of graphics, helps to learn how to transform reality into virtual imagination.</p>
+                    <a href="https://www.fiverr.com/share/qb8D02" class="btn btn-primary btn-sm"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-badge-3d-fill" viewBox="0 0 16 16">
+                      <path d="M10.157 5.968h-.844v4.06h.844c1.116 0 1.621-.667 1.621-2.02 0-1.354-.51-2.04-1.621-2.04z"/>
+                      <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm5.184 4.368c.646 0 1.055.378 1.06.9.008.537-.427.919-1.086.919-.598-.004-1.037-.325-1.068-.756H3c.03.914.791 1.688 2.153 1.688 1.24 0 2.285-.66 2.272-1.798-.013-.953-.747-1.38-1.292-1.432v-.062c.44-.07 1.125-.527 1.108-1.375-.013-.906-.8-1.57-2.053-1.565-1.31.005-2.043.734-2.074 1.67h1.103c.022-.391.383-.751.936-.751.532 0 .928.33.928.813.004.479-.383.835-.928.835h-.632v.914h.663zM8.126 11h2.189C12.125 11 13 9.893 13 7.985c0-1.894-.861-2.984-2.685-2.984H8.126V11z"/>
+                    </svg></a>
+                  </div>
+                </div>
+              </div>
+              <div class="backside">
+                <div class="card">
+                  <div class="card-body text-center mt-4">
+                    <h4 class="card-title">Mutlimedia & Animation</h4>
+                    <p class="card-text">Multimedia is multiple forms of digital media, such as videos, images, audio, texts, etc. Animation refers to a type of multimedia that provides the viewers with an illusion of pictures moving in a sequential manner.</p>
+                      <button type="button" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#exampleModal" style="margin-bottom: 10px;">Apply Now</button>
+
+                    <ul class="list-inline">
+                      <li class="list-inline-item">
+                        <a class="social-icon text-xs-center" target="_blank"
+                          href="https://www.fiverr.com/share/qb8D02">
+                          <i class="fa fa-facebook"></i>
+                        </a>
+                      </li>
+                      <li class="list-inline-item">
+                        <a class="social-icon text-xs-center" target="_blank"
+                          href="https://www.fiverr.com/share/qb8D02">
+                          <i class="fa fa-twitter"></i>
+                        </a>
+                      </li>
+                      <li class="list-inline-item">
+                        <a class="social-icon text-xs-center" target="_blank"
+                          href="https://www.fiverr.com/share/qb8D02">
+                          <i class="fa fa-skype"></i>
+                        </a>
+                      </li>
+                      <li class="list-inline-item">
+                        <a class="social-icon text-xs-center" target="_blank"
+                          href="https://www.fiverr.com/share/qb8D02">
+                          <i class="fa fa-google"></i>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- ./Team member -->
+        <!-- Team member -->
+        <div class="col-xs-12 col-sm-6 col-md-4">
+          <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
+            <div class="mainflip">
+              <div class="frontside">
+                <div class="card">
+                  <div class="card-body text-center">
+                    <p><img class=" img-fluid"
+                        src="img/course6.jpg" alt="card image">
+                    </p>
+                    <h4 class="card-title">Website Development</h4>
+                    <p class="card-text">first build a website using HTML, CSS, and JavaScript.</p>
+                    <a href="https://www.fiverr.com/share/qb8D02" class="btn btn-primary btn-sm"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-code-slash" viewBox="0 0 16 16">
+                      <path d="M10.478 1.647a.5.5 0 1 0-.956-.294l-4 13a.5.5 0 0 0 .956.294l4-13zM4.854 4.146a.5.5 0 0 1 0 .708L1.707 8l3.147 3.146a.5.5 0 0 1-.708.708l-3.5-3.5a.5.5 0 0 1 0-.708l3.5-3.5a.5.5 0 0 1 .708 0zm6.292 0a.5.5 0 0 0 0 .708L14.293 8l-3.147 3.146a.5.5 0 0 0 .708.708l3.5-3.5a.5.5 0 0 0 0-.708l-3.5-3.5a.5.5 0 0 0-.708 0z"/>
+                    </svg></a>
+                  </div>
+                </div>
+              </div>
+              <div class="backside">
+                <div class="card">
+                  <div class="card-body text-center mt-4">
+                    <h4 class="card-title">Website Development</h4>
+                    <p class="card-text" style="font-size: 14px;">You should have an understanding of HTML, CSS, and JavaScript. It's also recommended to learn about CSS and CSS frameworks. Developing these fundamental web development skills will give you the foundation and logic for communicating with programming languages.</p>
+                      <button type="button" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#exampleModal" style="margin-bottom: 10px;">Apply Now</button>
+
+                    <ul class="list-inline">
+                      <li class="list-inline-item">
+                        <a class="social-icon text-xs-center" target="_blank"
+                          href="https://www.fiverr.com/share/qb8D02">
+                          <i class="fa fa-facebook"></i>
+                        </a>
+                      </li>
+                      <li class="list-inline-item">
+                        <a class="social-icon text-xs-center" target="_blank"
+                          href="https://www.fiverr.com/share/qb8D02">
+                          <i class="fa fa-twitter"></i>
+                        </a>
+                      </li>
+                      <li class="list-inline-item">
+                        <a class="social-icon text-xs-center" target="_blank"
+                          href="https://www.fiverr.com/share/qb8D02">
+                          <i class="fa fa-skype"></i>
+                        </a>
+                      </li>
+                      <li class="list-inline-item">
+                        <a class="social-icon text-xs-center" target="_blank"
+                          href="https://www.fiverr.com/share/qb8D02">
+                          <i class="fa fa-google"></i>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ./Team member -->
+
+    <div class="container">
+      <br><br>
+      <h5 class="section-title h1">OUR SHORT COURSES</h5>
+      <div class="row">
+        <div class="col-xs-12 col-sm-6 col-md-4">
+          <div class="image-flip">
+            <div class="mainflip flip-0">
+              <div class="frontside">
+                <div class="card">
+                  <div class="card-body text-center">
+                    <p><img class=" img-fluid"
+                        src="img/course7.jpg" alt="card image">
+                    </p>
+                    <h4 class="card-title">MS Office Courses</h4>
+                    <p class="card-text" style="font-size: 14px;">It designed to help with productivity and completing common tasks on computer.</p>
+                    <a href="https://www.fiverr.com/share/qb8D02" class="btn btn-primary btn-sm"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-microsoft" viewBox="0 0 16 16">
+                      <path d="M7.462 0H0v7.19h7.462V0zM16 0H8.538v7.19H16V0zM7.462 8.211H0V16h7.462V8.211zm8.538 0H8.538V16H16V8.211z"/>
+                    </svg></a>
+                  </div>
+                </div>
+              </div>
+              <div class="backside">
+                <div class="card">
+                  <div class="card-body text-center mt-4">
+                    <h4 class="card-title">MS Office Courses</h4>
+                    <p class="card-text">It includes: Full Office desktop apps such as Word, PowerPoint, Excel, Outlook, Publisher and Access for Windows PCs, as well as access to additional OneNote features (features vary).</p>
+                      <button type="button" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#exampleModal2" style="margin-bottom: 10px;">Apply Now</button>
+
+                    <ul class="list-inline">
+                      <li class="list-inline-item">
+                        <a class="social-icon text-xs-center" target="_blank"
+                          href="https://www.fiverr.com/share/qb8D02">
+                          <i class="fa fa-facebook"></i>
+                        </a>
+                      </li>
+                      <li class="list-inline-item">
+                        <a class="social-icon text-xs-center" target="_blank"
+                          href="https://www.fiverr.com/share/qb8D02">
+                          <i class="fa fa-twitter"></i>
+                        </a>
+                      </li>
+                      <li class="list-inline-item">
+                        <a class="social-icon text-xs-center" target="_blank"
+                          href="https://www.fiverr.com/share/qb8D02">
+                          <i class="fa fa-skype"></i>
+                        </a>
+                      </li>
+                      <li class="list-inline-item">
+                        <a class="social-icon text-xs-center" target="_blank"
+                          href="https://www.fiverr.com/share/qb8D02">
+                          <i class="fa fa-google"></i>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- ./Team member -->
+        <!-- Team member -->
+        <div class="col-xs-12 col-sm-6 col-md-4">
+          <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
+            <div class="mainflip">
+              <div class="frontside">
+                <div class="card">
+                  <div class="card-body text-center">
+                    <p><img class=" img-fluid"
+                        src="img/course8.jpg" alt="card image">
+                    </p>
+                    <h4 class="card-title">Python</h4>
+                    <p class="card-text" style="font-size: 14px;">Used for: web development (server-side), software development, mathematics, system scripting.</p>
+                    <a href="https://www.fiverr.com/share/qb8D02" data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-primary btn-sm"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-filetype-py" viewBox="0 0 16 16">
+                      <path fill-rule="evenodd" d="M14 4.5V14a2 2 0 0 1-2 2H7v-1h5a1 1 0 0 0 1-1V4.5h-2A1.5 1.5 0 0 1 9.5 3V1H4a1 1 0 0 0-1 1v9H2V2a2 2 0 0 1 2-2h5.5L14 4.5ZM0 11.85h1.6c.289 0 .533.06.732.179.201.117.355.276.46.477.105.201.158.427.158.677 0 .25-.054.476-.16.677-.106.199-.26.357-.464.474a1.452 1.452 0 0 1-.732.173H.79v1.342H0V11.85Zm2.06 1.714a.795.795 0 0 0 .085-.381c0-.227-.062-.4-.185-.521-.123-.122-.294-.182-.513-.182H.788v1.406h.66a.794.794 0 0 0 .374-.082.574.574 0 0 0 .238-.24Zm2.963.75v1.535H4.23v-1.52L2.89 11.85h.876l.853 1.696h.032l.856-1.696h.855l-1.339 2.464Z"/>
+                    </svg></a>
+                  </div>
+                </div>
+              </div>
+              <div class="backside">
+                <div class="card">
+                  <div class="card-body text-center mt-4">
+                    <h4 class="card-title">Python</h4>
+                    <p class="card-text">It is a popular programming language. It was created by Guido van Rossum, and released in 1991. It is used for developing websites and software, task automation, data analysis, and data visualization. </p>
+                      <button type="button" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#exampleModal2" style="margin-bottom: 10px;">Apply Now</button>
+
+                    <ul class="list-inline">
+                      <li class="list-inline-item">
+                        <a class="social-icon text-xs-center" target="_blank"
+                          href="https://www.fiverr.com/share/qb8D02">
+                          <i class="fa fa-facebook"></i>
+                        </a>
+                      </li>
+                      <li class="list-inline-item">
+                        <a class="social-icon text-xs-center" target="_blank"
+                          href="https://www.fiverr.com/share/qb8D02">
+                          <i class="fa fa-twitter"></i>
+                        </a>
+                      </li>
+                      <li class="list-inline-item">
+                        <a class="social-icon text-xs-center" target="_blank"
+                          href="https://www.fiverr.com/share/qb8D02">
+                          <i class="fa fa-skype"></i>
+                        </a>
+                      </li>
+                      <li class="list-inline-item">
+                        <a class="social-icon text-xs-center" target="_blank"
+                          href="https://www.fiverr.com/share/qb8D02">
+                          <i class="fa fa-google"></i>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- ./Team member -->
+        <!-- Team member -->
+        <div class="col-xs-12 col-sm-6 col-md-4">
+          <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
+            <div class="mainflip">
+              <div class="frontside">
+                <div class="card">
+                  <div class="card-body text-center">
+                    <p><img class=" img-fluid"
+                        src="img/course9.jpg" alt="card image">
+                    </p>
+                    <h4 class="card-title">Wordpress</h4>
+                    <p class="card-text" style="font-size: 14px;">WordPress is a content management system (CMS) that allows you to host and build websites. </p>
+                    <a href="https://www.fiverr.com/share/qb8D02" class="btn btn-primary btn-sm"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-wordpress" viewBox="0 0 16 16">
+                      <path d="M12.633 7.653c0-.848-.305-1.435-.566-1.892l-.08-.13c-.317-.51-.594-.958-.594-1.48 0-.63.478-1.218 1.152-1.218.02 0 .039.002.058.003l.031.003A6.838 6.838 0 0 0 8 1.137 6.855 6.855 0 0 0 2.266 4.23c.16.005.313.009.442.009.717 0 1.828-.087 1.828-.087.37-.022.414.521.044.565 0 0-.371.044-.785.065l2.5 7.434 1.5-4.506-1.07-2.929c-.369-.022-.719-.065-.719-.065-.37-.022-.326-.588.043-.566 0 0 1.134.087 1.808.087.718 0 1.83-.087 1.83-.087.37-.022.413.522.043.566 0 0-.372.043-.785.065l2.48 7.377.684-2.287.054-.173c.27-.86.469-1.495.469-2.046zM1.137 8a6.864 6.864 0 0 0 3.868 6.176L1.73 5.206A6.837 6.837 0 0 0 1.137 8z"/>
+                      <path d="M6.061 14.583 8.121 8.6l2.109 5.78c.014.033.03.064.049.094a6.854 6.854 0 0 1-4.218.109zm7.96-9.876c.03.219.047.453.047.706 0 .696-.13 1.479-.522 2.458l-2.096 6.06a6.86 6.86 0 0 0 2.572-9.224z"/>
+                      <path fill-rule="evenodd" d="M0 8c0-4.411 3.589-8 8-8 4.41 0 8 3.589 8 8s-3.59 8-8 8c-4.411 0-8-3.589-8-8zm.367 0c0 4.209 3.424 7.633 7.633 7.633 4.208 0 7.632-3.424 7.632-7.633C15.632 3.79 12.208.367 8 .367 3.79.367.367 3.79.367 8z"/>
+                    </svg></a>
+                  </div>
+                </div>
+              </div>
+              <div class="backside">
+                <div class="card">
+                  <div class="card-body text-center mt-4">
+                    <h4 class="card-title">Wordpress</h4>
+                    <p class="card-text">WordPress contains plugin architecture and a template system, so you can customize any website to fit your business, blog, portfolio, or online store.It's extremely flexible and functionality of your website</p>
+                      <button type="button" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#exampleModal2" style="margin-bottom: 10px;">Apply Now</button>
+
+                    <ul class="list-inline">
+                      <li class="list-inline-item">
+                        <a class="social-icon text-xs-center" target="_blank"
+                          href="https://www.fiverr.com/share/qb8D02">
+                          <i class="fa fa-facebook"></i>
+                        </a>
+                      </li>
+                      <li class="list-inline-item">
+                        <a class="social-icon text-xs-center" target="_blank"
+                          href="https://www.fiverr.com/share/qb8D02">
+                          <i class="fa fa-twitter"></i>
+                        </a>
+                      </li>
+                      <li class="list-inline-item">
+                        <a class="social-icon text-xs-center" target="_blank"
+                          href="https://www.fiverr.com/share/qb8D02">
+                          <i class="fa fa-skype"></i>
+                        </a>
+                      </li>
+                      <li class="list-inline-item">
+                        <a class="social-icon text-xs-center" target="_blank"
+                          href="https://www.fiverr.com/share/qb8D02">
+                          <i class="fa fa-google"></i>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- ./Team member -->
+        <!-- Team member -->
+        <div class="col-xs-12 col-sm-6 col-md-4">
+          <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
+            <div class="mainflip">
+              <div class="frontside">
+                <div class="card">
+                  <div class="card-body text-center">
+                    <p><img class=" img-fluid"
+                        src="img/course10.jpg" alt="card image">
+                    </p>
+                    <h4 class="card-title">Java</h4>
+                    <p class="card-text" style="font-size: 14px;">Used as the server-side language for most back-end development projects.</p>
+                    <a href="https://www.fiverr.com/share/qb8D02" class="btn btn-primary btn-sm"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-filetype-java" viewBox="0 0 16 16">
+                      <path fill-rule="evenodd" d="M14 4.5V11h-1V4.5h-2A1.5 1.5 0 0 1 9.5 3V1H4a1 1 0 0 0-1 1v9H2V2a2 2 0 0 1 2-2h5.5L14 4.5ZM1.521 15.175a1.321 1.321 0 0 1-.082-.466h.765a.577.577 0 0 0 .073.27.499.499 0 0 0 .454.246c.19 0 .33-.055.422-.164.092-.11.138-.265.138-.466V11.85h.79v2.725c0 .44-.118.774-.357 1.005-.236.23-.564.345-.984.345a1.59 1.59 0 0 1-.568-.094 1.144 1.144 0 0 1-.408-.266 1.139 1.139 0 0 1-.243-.39Zm3.972-.354-.314 1.028h-.8l1.342-3.999h.926l1.336 3.999h-.84l-.314-1.028H5.493Zm1.178-.59-.49-1.616h-.035l-.49 1.617h1.015Zm2.342 1.618h.952l1.327-3.999h-.878l-.888 3.138h-.038L8.59 11.85h-.917l1.34 3.999Zm3.087-1.028-.314 1.028h-.8l1.342-3.999h.926l1.336 3.999h-.84l-.314-1.028H12.1Zm1.178-.59-.49-1.616h-.035l-.49 1.617h1.015Z"/>
+                    </svg></a>
+                  </div>
+                </div>
+              </div>
+              <div class="backside">
+                <div class="card">
+                  <div class="card-body text-center mt-4">
+                    <h4 class="card-title">java</h4>
+                    <p class="card-text">Java is an object-oriented programming language that produces software for multiple platforms. When a programmer writes a Java application, the compiled code runs on most OS, including Windows, Linux and Mac OS.</p>
+                      <button type="button" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#exampleModal2" style="margin-bottom: 10px;">Apply Now</button>
+
+                    <ul class="list-inline">
+                      <li class="list-inline-item">
+                        <a class="social-icon text-xs-center" target="_blank"
+                          href="https://www.fiverr.com/share/qb8D02">
+                          <i class="fa fa-facebook"></i>
+                        </a>
+                      </li>
+                      <li class="list-inline-item">
+                        <a class="social-icon text-xs-center" target="_blank"
+                          href="https://www.fiverr.com/share/qb8D02">
+                          <i class="fa fa-twitter"></i>
+                        </a>
+                      </li>
+                      <li class="list-inline-item">
+                        <a class="social-icon text-xs-center" target="_blank"
+                          href="https://www.fiverr.com/share/qb8D02">
+                          <i class="fa fa-skype"></i>
+                        </a>
+                      </li>
+                      <li class="list-inline-item">
+                        <a class="social-icon text-xs-center" target="_blank"
+                          href="https://www.fiverr.com/share/qb8D02">
+                          <i class="fa fa-google"></i>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- ./Team member -->
+        <!-- Team member -->
+        <div class="col-xs-12 col-sm-6 col-md-4">
+          <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
+            <div class="mainflip">
+              <div class="frontside">
+                <div class="card">
+                  <div class="card-body text-center">
+                    <p><img class=" img-fluid"
+                        src="img/course11.jpg" alt="card image">
+                    </p>
+                    <h4 class="card-title">Photoshop</h4>
+                    <p class="card-text">Photoshop is Adobe's photo editing, image creation and graphic design software. </p>
+                    <a href="https://www.fiverr.com/share/qb8D02" class="btn btn-primary btn-sm"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-image" viewBox="0 0 16 16">
+                      <path d="M6.002 5.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"/>
+                      <path d="M2.002 1a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2h-12zm12 1a1 1 0 0 1 1 1v6.5l-3.777-1.947a.5.5 0 0 0-.577.093l-3.71 3.71-2.66-1.772a.5.5 0 0 0-.63.062L1.002 12V3a1 1 0 0 1 1-1h12z"/>
+                    </svg></a>
+                  </div>
+                </div>
+              </div>
+              <div class="backside">
+                <div class="card">
+                  <div class="card-body text-center mt-4">
+                    <h4 class="card-title">Photoshop</h4>
+                    <p class="card-text">The software provides many image editing features for raster images and vector graphics. It uses a layer-based editing system that enables image creation and altering with multiple overlays.</p>
+                      <button type="button" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#exampleModal2" style="margin-bottom: 10px;">Apply Now</button>
+
+                    <ul class="list-inline">
+                      <li class="list-inline-item">
+                        <a class="social-icon text-xs-center" target="_blank"
+                          href="https://www.fiverr.com/share/qb8D02">
+                          <i class="fa fa-facebook"></i>
+                        </a>
+                      </li>
+                      <li class="list-inline-item">
+                        <a class="social-icon text-xs-center" target="_blank"
+                          href="https://www.fiverr.com/share/qb8D02">
+                          <i class="fa fa-twitter"></i>
+                        </a>
+                      </li>
+                      <li class="list-inline-item">
+                        <a class="social-icon text-xs-center" target="_blank"
+                          href="https://www.fiverr.com/share/qb8D02">
+                          <i class="fa fa-skype"></i>
+                        </a>
+                      </li>
+                      <li class="list-inline-item">
+                        <a class="social-icon text-xs-center" target="_blank"
+                          href="https://www.fiverr.com/share/qb8D02">
+                          <i class="fa fa-google"></i>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- ./Team member -->
+        <!-- Team member -->
+        <div class="col-xs-12 col-sm-6 col-md-4">
+          <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
+            <div class="mainflip">
+              <div class="frontside">
+                <div class="card">
+                  <div class="card-body text-center">
+                    <p><img class=" img-fluid"
+                        src="img/courses12.jpg" alt="card image">
+                    </p>
+                    <h4 class="card-title">Bootstrap</h4>
+                    <p class="card-text" style="font-size: 14px;">Bootstrap is a potent front-end framework used to create modern websites and web apps.</p>
+                    <a href="https://www.fiverr.com/share/qb8D02" class="btn btn-primary btn-sm"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-bootstrap-fill" viewBox="0 0 16 16">
+                      <path d="M6.375 7.125V4.658h1.78c.973 0 1.542.457 1.542 1.237 0 .802-.604 1.23-1.764 1.23H6.375zm0 3.762h1.898c1.184 0 1.81-.48 1.81-1.377 0-.885-.65-1.348-1.886-1.348H6.375v2.725z"/>
+                      <path d="M4.002 0a4 4 0 0 0-4 4v8a4 4 0 0 0 4 4h8a4 4 0 0 0 4-4V4a4 4 0 0 0-4-4h-8zm1.06 12V3.545h3.399c1.587 0 2.543.809 2.543 2.11 0 .884-.65 1.675-1.483 1.816v.1c1.143.117 1.904.931 1.904 2.033 0 1.488-1.084 2.396-2.888 2.396H5.062z"/>
+                    </svg></a>
+                  </div>
+                </div>
+              </div>
+              <div class="backside">
+                <div class="card">
+                  <div class="card-body text-center mt-4">
+                    <h4 class="card-title">Bootstrap</h4>
+                    <p class="card-text">It is a free and open source front end development framework. This framework is built on HTML, CSS, and JavaScript to facilitate the development of responsive, mobile-first sites and apps.</p>
+                      <button type="button" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#exampleModal2" style="margin-bottom: 10px;">Apply Now</button>
+
+                    <ul class="list-inline">
+                      <li class="list-inline-item">
+                        <a class="social-icon text-xs-center" target="_blank"
+                          href="https://www.fiverr.com/share/qb8D02">
+                          <i class="fa fa-facebook"></i>
+                        </a>
+                      </li>
+                      <li class="list-inline-item">
+                        <a class="social-icon text-xs-center" target="_blank"
+                          href="https://www.fiverr.com/share/qb8D02">
+                          <i class="fa fa-twitter"></i>
+                        </a>
+                      </li>
+                      <li class="list-inline-item">
+                        <a class="social-icon text-xs-center" target="_blank"
+                          href="https://www.fiverr.com/share/qb8D02">
+                          <i class="fa fa-skype"></i>
+                        </a>
+                      </li>
+                      <li class="list-inline-item">
+                        <a class="social-icon text-xs-center" target="_blank"
+                          href="https://www.fiverr.com/share/qb8D02">
+                          <i class="fa fa-google"></i>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Team -->
+
+
+  <!-- Modal 1 -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel"> Apply For course</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="mb-4">
+          <form action="/examples/actions/confirmation.php" method="post">
+            <div class="row mb-3">
+              <div class="col mb-3">
+                <label class="form-label" for="inputName">First Name</label>
+                <input type="text" class="form-control form-label" id="inputName" placeholder="First name" aria-label="First name"required>
+              </div>
+              <div class="col mb-3">
+                <label class="form-label" for="inputName">Last Name</label>
+                <input type="text" class="form-control form-label" id="inputName" placeholder="Last name" aria-label="Last name" required>
+              </div>
+            </div>
+              <div class="mb-3">
+                  <label class="form-label" for="inputEmail">Email</label>
+                  <input type="email" class="form-control" id="inputEmail" placeholder="Email" required>
+              </div>
+              <div class="mb-3">
+                  <label class="form-label" for="inputPassword">Password</label>
+                  <input type="password" class="form-control" id="inputPassword" placeholder="Password" required>
+              </div>
+              <div class="mb-3">
+                <select class="form-select" aria-label="Default select example" required>
+                  <option selected> select the course</option>
+                  <option value="1">Software Engineer</option>
+                  <option value="2">Hardware Engineer</option>
+                  <option value="3">Digital Marketing</option>
+                  <option value="4">E-Accounting</option>
+                  <option value="5">Multimedia & Animation</option>
+                  <option value="6">Website Development</option>
+                  
+
+                </select>
+
+              </div>
+              <div class="mb-3">
+                  <div class="form-check">
+                      <input class="form-check-input" type="checkbox" id="checkRemember">
+                      <label class="form-check-label" for="checkRemember">Remember me</label>
+                  </div>
+              </div>
+              <button type="submit" class="btn btn-primary" ><a href="img/Capture.JPG" style=" text-decoration: none; color: white;"> Submit </a></button>
+          </form>
+      </div>
+
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+       
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!----modal 2-->
+<div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel"> Apply For course</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="mb-4">
+          <form action="/examples/actions/confirmation.php" method="post">
+            <div class="row mb-3">
+              <div class="col mb-3">
+                <label class="form-label" for="inputName">First Name</label>
+                <input type="text" class="form-control form-label" id="inputName" placeholder="First name" aria-label="First name"required>
+              </div>
+              <div class="col mb-3">
+                <label class="form-label" for="inputName">Last Name</label>
+                <input type="text" class="form-control form-label" id="inputName" placeholder="Last name" aria-label="Last name" required>
+              </div>
+            </div>
+              <div class="mb-3">
+                  <label class="form-label" for="inputEmail">Email</label>
+                  <input type="email" class="form-control" id="inputEmail" placeholder="Email" required>
+              </div>
+              <div class="mb-3">
+                  <label class="form-label" for="inputPassword">Password</label>
+                  <input type="password" class="form-control" id="inputPassword" placeholder="Password" required>
+              </div>
+              <div class="mb-3">
+                <select class="form-select" aria-label="Default select example" required>
+                  <option selected> select the course</option>
+                  <option value="1">MS Office</option>
+                  <option value="2">Python</option>
+                  <option value="3">Wordpress</option>
+                  <option value="4">Java</option>
+                  <option value="5">Photoshop</option>
+                  <option value="6">Bootstrap</option>
+                  
+
+                </select>
+
+              </div>
+              <div class="mb-3">
+                  <div class="form-check">
+                      <input class="form-check-input" type="checkbox" id="checkRemember">
+                      <label class="form-check-label" for="checkRemember">Remember me</label>
+                  </div>
+              </div>
+              <button type="submit" class="btn btn-primary" ><a href="img/Capture.JPG" style=" text-decoration: none; color: white;"> Submit </a></button>
+          </form>
+      </div>
+
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+       
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  <!-- FOOTER -->
+  <div class="container" style=" margin-left: 80px">
+    <footer class="d-flex flex-wrap justify-content-between align-items-left py-4  border-top">
+      <div class="col-md-4 d-flex align-items-left">
+        <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
+          <img class="img-fluid" src="img/logo.jpg " style="height: 30px; width: 50px;  border-radius: 45%;">
+        </a>
+        <span class="text-muted">© 2022 Academy, Inc</span>
+      </div>
+
+      <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+        <li class="ms-3"><a class="text-muted" href="https://twitter.com/i/flow/login?input_flow_data=%7B%22requested_variant%22%3A%22eyJsYW5nIjoiZW4ifQ%3D%3D%22%7D"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+              fill="currentColor" class="bi bi-twitter" viewBox="0 0 16 16">
+              <path
+                d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z" />
+            </svg></a></li>
+        <li class="ms-3"><a class="text-muted" href="https://www.instagram.com/"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+              fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+              <path
+                d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z" />
+            </svg></a></li>
+        <li class="ms-3"><a class="text-muted" href="https://www.facebook.com/"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24 "
+              fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+              <path
+                d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z" />
+            </svg></a></li>
+      </ul>
+    </div>
+    </footer>
+
+
+
+
+<!---alert -->
+  <script type="text/javascript">
+function showMessage() {
+                alert("You successfully logout from here...");
+
+}
+  </script>
+
+
+
+  <!-- Optional JavaScript; choose one of the two! -->
+
+  <!-- Option 1: Bootstrap Bundle with Popper 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"></script>-->
+
+  <!-- Option 2: Separate Popper and Bootstrap JS --->
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+    integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+    integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+    crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+</body>
+
+</html>
